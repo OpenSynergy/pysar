@@ -1,4 +1,4 @@
-# PySAR
+# PySAR - A Model Access and Code Generation Framework Written in Python.
 
 ## Rationale
 
