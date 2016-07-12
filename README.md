@@ -40,7 +40,7 @@ Cornel
 
 (cornel dot izbasa at openberrysynergy dot com minus fruit)
 
-## P.S. (for whomever may care)
+## P. S. (for whomever may care)
 
 To paraphrase the esteemed Alan J. Perlis, 
 "This _code_ is dedicated, in respect and admiration, to the spirit that lives in the computer."
