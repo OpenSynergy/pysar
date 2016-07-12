@@ -1,5 +1,7 @@
 # PySAR: a Model Access and Code Generation Framework Written in Python
 
+Note: the opinions expressed below are my own and not the views of my employer.
+
 ## Rationale
 
 PySAR was created in my spare time as a proof of concept framework for model access and code generation using Python. 
