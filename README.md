@@ -30,7 +30,7 @@ The distribution notably includes:
 
 Enjoy, and know that your feedback is highly appreciated.
 
-I'd also like to thank OpenSynergy, Inc.'s management for the permission to publish this as open source under the company's "umbrella".
+I'd also like to thank OpenSynergy, Inc.'s management for their support and permission to publish this as open source under the company's "umbrella".
 
 Cheers,
 
