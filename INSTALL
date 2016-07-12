@@ -1,0 +1,6 @@
+PySAR depends on lxml and lxml.objectify for model access ([de]serialization) and on Jinja2 for code generation.
+To run the tests in test_pysar.py, py.test is needed.
+
+Therefore, these must be installed.
+
+Good luck!

@@ -1,0 +1,14 @@
+{% extends "bsw/MSN_Cfg_h.j2" %}
+{% block header %}{{super()}}{% endblock %}
+
+{% block source %}
+#define DEMO_DEBOUNCE_COUNTER_BASED_SUPPORT STD_{{ 
+	Demo.getDemoGeneral.getDemoDebounceCounterBasedSupport and 'ON' or 'OFF' }}
+
+{% for callback in Demo.getDemoGeneral.getDemoCallbackDTCStatusChanged %}
+extern StatusChangedCallback_t {{ 
+	callback.getDemoCallbackDTCStatusChangedFnc }}(DTCId_t, Status_t, Status_t);
+{% endfor %}
+{% endblock %}
+
+{% block footer %}{{super()}}{% endblock %}

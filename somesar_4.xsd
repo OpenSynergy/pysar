@@ -1,0 +1,242 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://somesar.org/schema/r4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SOMESAR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PACKAGES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PACKAGE">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="SHORT_NAME"/>
+                    <xs:element name="MEMBERS">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="MACC_MODULE_DEF">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SHORT_NAME"/>
+                                <xs:element name="CONTAINERS">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="MACC_PARAM_CONF_CONTAINER_DEF">
+                                        <xs:annotation>
+                                          <xs:documentation>sample comment</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="SHORT_NAME"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="SYSTEM">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SHORT_NAME"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="SYSTEM_SIGNAL">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SHORT_NAME"/>
+                                <xs:element type="xs:string" name="DYNAMIC_LENGTH"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="PACKAGES">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PACKAGE" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="SHORT_NAME"/>
+                                <xs:element name="MEMBERS">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="MACC_MODULE_CONFIGURATION_VALUES" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="SHORT_NAME"/>
+                                            <xs:element name="DEFINITION_REF">
+                                              <xs:complexType>
+                                                <xs:simpleContent>
+                                                  <xs:extension base="xs:string">
+                                                    <xs:attribute type="xs:string" name="DEST"/>
+                                                  </xs:extension>
+                                                </xs:simpleContent>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="CONTAINERS">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="MACC_CONTAINER_VALUE" maxOccurs="unbounded" minOccurs="0">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element type="xs:string" name="SHORT_NAME"/>
+                                                        <xs:element name="DEFINITION_REF">
+                                                          <xs:complexType>
+                                                            <xs:simpleContent>
+                                                              <xs:extension base="xs:string">
+                                                                <xs:attribute type="xs:string" name="DEST" use="optional"/>
+                                                              </xs:extension>
+                                                            </xs:simpleContent>
+                                                          </xs:complexType>
+                                                        </xs:element>
+                                                        <xs:element name="PARAMETER_VALUES" minOccurs="0">
+                                                          <xs:complexType>
+                                                            <xs:sequence>
+                                                              <xs:element name="MACC_NUMERICAL_PARAM_VALUE">
+                                                                <xs:complexType>
+                                                                  <xs:sequence>
+                                                                    <xs:element name="DEFINITION_REF">
+                                                                      <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                          <xs:extension base="xs:string">
+                                                                            <xs:attribute type="xs:string" name="DEST"/>
+                                                                          </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                      </xs:complexType>
+                                                                    </xs:element>
+                                                                    <xs:element type="xs:string" name="VALUE"/>
+                                                                  </xs:sequence>
+                                                                </xs:complexType>
+                                                              </xs:element>
+                                                            </xs:sequence>
+                                                          </xs:complexType>
+                                                        </xs:element>
+                                                        <xs:element name="SUB_CONTAINERS" minOccurs="0">
+                                                          <xs:complexType>
+                                                            <xs:sequence>
+                                                              <xs:element name="MACC_CONTAINER_VALUE" maxOccurs="unbounded" minOccurs="0">
+                                                                <xs:complexType>
+                                                                  <xs:sequence>
+                                                                    <xs:element type="xs:string" name="SHORT_NAME"/>
+                                                                    <xs:element name="DEFINITION_REF">
+                                                                      <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                          <xs:extension base="xs:string">
+                                                                            <xs:attribute type="xs:string" name="DEST" use="optional"/>
+                                                                          </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                      </xs:complexType>
+                                                                    </xs:element>
+                                                                    <xs:element name="PARAMETER_VALUES">
+                                                                      <xs:complexType>
+                                                                        <xs:sequence>
+                                                                          <xs:element name="MACC_TEXTUAL_PARAM_VALUE">
+                                                                            <xs:complexType>
+                                                                              <xs:sequence>
+                                                                                <xs:element name="DEFINITION_REF">
+                                                                                  <xs:complexType>
+                                                                                    <xs:simpleContent>
+                                                                                      <xs:extension base="xs:string">
+                                                                                        <xs:attribute type="xs:string" name="DEST" use="optional"/>
+                                                                                      </xs:extension>
+                                                                                    </xs:simpleContent>
+                                                                                  </xs:complexType>
+                                                                                </xs:element>
+                                                                                <xs:element type="xs:string" name="VALUE"/>
+                                                                              </xs:sequence>
+                                                                            </xs:complexType>
+                                                                          </xs:element>
+                                                                        </xs:sequence>
+                                                                      </xs:complexType>
+                                                                    </xs:element>
+                                                                  </xs:sequence>
+                                                                </xs:complexType>
+                                                              </xs:element>
+                                                            </xs:sequence>
+                                                          </xs:complexType>
+                                                        </xs:element>
+                                                      </xs:sequence>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="MACC_MODULE_DEF" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element type="xs:string" name="SHORT_NAME"/>
+                                            <xs:element type="xs:byte" name="LOWER_MULTIPLICITY"/>
+                                            <xs:element type="xs:byte" name="UPPER_MULTIPLICITY"/>
+                                            <xs:element name="CONTAINERS">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="MACC_PARAM_CONF_CONTAINER_DEF">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element type="xs:string" name="SHORT_NAME"/>
+                                                        <xs:element type="xs:byte" name="LOWER_MULTIPLICITY"/>
+                                                        <xs:element type="xs:byte" name="UPPER_MULTIPLICITY"/>
+                                                        <xs:element name="SUB_CONTAINERS">
+                                                          <xs:complexType>
+                                                            <xs:sequence>
+                                                              <xs:element name="MACC_PARAM_CONF_CONTAINER_DEF">
+                                                                <xs:complexType>
+                                                                  <xs:sequence>
+                                                                    <xs:element type="xs:string" name="SHORT_NAME"/>
+                                                                    <xs:element type="xs:byte" name="LOWER_MULTIPLICITY"/>
+                                                                    <xs:element type="xs:string" name="UPPER_MULTIPLICITY_INFINITE"/>
+                                                                    <xs:element name="PARAMETERS">
+                                                                      <xs:complexType>
+                                                                        <xs:sequence>
+                                                                          <xs:element name="MACC_FUNCTION_NAME_DEF">
+                                                                            <xs:complexType>
+                                                                              <xs:sequence>
+                                                                                <xs:element type="xs:string" name="SHORT_NAME"/>
+                                                                                <xs:element type="xs:byte" name="LOWER_MULTIPLICITY"/>
+                                                                                <xs:element type="xs:byte" name="UPPER_MULTIPLICITY"/>
+                                                                              </xs:sequence>
+                                                                            </xs:complexType>
+                                                                          </xs:element>
+                                                                        </xs:sequence>
+                                                                      </xs:complexType>
+                                                                    </xs:element>
+                                                                  </xs:sequence>
+                                                                </xs:complexType>
+                                                              </xs:element>
+                                                            </xs:sequence>
+                                                          </xs:complexType>
+                                                        </xs:element>
+                                                      </xs:sequence>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

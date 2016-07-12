@@ -1,0 +1,106 @@
+<SOMESAR xmlns="http://somesar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://somesar.org/schema/r4.0 pySOMESAR-4_2_2.xsd">
+	<PACKAGES>
+		<PACKAGE>
+			<SHORT_NAME>SOMESAR</SHORT_NAME>
+			<MEMBERS>
+				<MACC_MODULE_DEF>
+					<SHORT_NAME>Bla</SHORT_NAME>
+					<CONTAINERS>
+						<!-- sample comment -->
+						<MACC_PARAM_CONF_CONTAINER_DEF>
+							<SHORT_NAME>A</SHORT_NAME>
+						</MACC_PARAM_CONF_CONTAINER_DEF>
+					</CONTAINERS>
+				</MACC_MODULE_DEF>
+				<SYSTEM>
+					<SHORT_NAME>System</SHORT_NAME>
+				</SYSTEM>
+				<SYSTEM_SIGNAL>
+					<SHORT_NAME>SYSTEM_SIGNAL1</SHORT_NAME>
+					<DYNAMIC_LENGTH>false</DYNAMIC_LENGTH>
+				</SYSTEM_SIGNAL>
+	        </MEMBERS>
+        	<PACKAGES>
+        		<PACKAGE>
+	        		<SHORT_NAME>Config</SHORT_NAME>
+	        		<MEMBERS>
+						<MACC_MODULE_CONFIGURATION_VALUES>
+							<SHORT_NAME>Demo</SHORT_NAME>
+							<DEFINITION_REF DEST="MACC_MODULE_DEF">/SOMESAR/SomeDefs/Demo</DEFINITION_REF>
+							<CONTAINERS>
+								<MACC_CONTAINER_VALUE>
+									<SHORT_NAME>DemoConfigSet</SHORT_NAME>
+									<DEFINITION_REF DEST="MACC_CONTAINER_DEF">/SOMESAR/SomeDefs/Demo/DemoConfigSet</DEFINITION_REF>
+								</MACC_CONTAINER_VALUE>
+								<MACC_CONTAINER_VALUE>
+									<SHORT_NAME>DemoGeneral</SHORT_NAME>
+									<DEFINITION_REF DEST="MACC_CONTAINER_DEF">/SOMESAR/SomeDefs/Demo/DemoGeneral</DEFINITION_REF>
+									<PARAMETER_VALUES>
+				                      <MACC_NUMERICAL_PARAM_VALUE>
+				                     	<DEFINITION_REF DEST="MACC_BOOLEAN_PARAM_DEF">/SOMESAR/SomeDefs/Demo/DemoGeneral/DemoDebounceCounterBasedSupport</DEFINITION_REF>
+				                         <VALUE>false</VALUE>
+				                      </MACC_NUMERICAL_PARAM_VALUE>
+									</PARAMETER_VALUES>
+									<SUB_CONTAINERS>
+					                    <MACC_CONTAINER_VALUE>
+		        			                 <SHORT_NAME>DemoCallbackDTCStatusChanged0</SHORT_NAME>
+						                     <DEFINITION_REF DEST="MACC_CONTAINER_DEF">/SOMESAR/SomeDefs/Demo/DemoGeneral/DemoCallbackDTCStatusChanged</DEFINITION_REF>
+					                         <PARAMETER_VALUES>
+					                            <MACC_TEXTUAL_PARAM_VALUE>
+					                            	<DEFINITION_REF DEST="MACC_FUNCTION_NAME_DEF">/SOMESAR/SomeDefs/Demo/DemoGeneral/DemoCallbackDTCStatusChanged/DemoCallbackDTCStatusChangedFnc</DEFINITION_REF>
+					                            	<VALUE>Some_Function</VALUE>
+					                            </MACC_TEXTUAL_PARAM_VALUE>
+	                         				</PARAMETER_VALUES>
+	                      				</MACC_CONTAINER_VALUE>
+					                    <MACC_CONTAINER_VALUE>
+		        			                 <SHORT_NAME>DemoCallbackDTCStatusChanged1</SHORT_NAME>
+						                     <DEFINITION_REF DEST="MACC_CONTAINER_DEF">/SOMESAR/SomeDefs/Demo/DemoGeneral/DemoCallbackDTCStatusChanged</DEFINITION_REF>
+					                         <PARAMETER_VALUES>
+					                            <MACC_TEXTUAL_PARAM_VALUE>
+					                            	<DEFINITION_REF DEST="MACC_FUNCTION_NAME_DEF">/SOMESAR/SomeDefs/Demo/DemoGeneral/DemoCallbackDTCStatusChanged/DemoCallbackDTCStatusChangedFnc</DEFINITION_REF>
+					                            	<VALUE>Other_Function</VALUE>
+					                            </MACC_TEXTUAL_PARAM_VALUE>
+	                         				</PARAMETER_VALUES>
+	                      				</MACC_CONTAINER_VALUE>
+	                      			</SUB_CONTAINERS>
+								</MACC_CONTAINER_VALUE>
+							</CONTAINERS>
+						</MACC_MODULE_CONFIGURATION_VALUES>
+					</MEMBERS>
+				</PACKAGE>
+
+        		<PACKAGE>
+        			<SHORT_NAME>SomeDefs</SHORT_NAME>
+        			<MEMBERS>
+						<MACC_MODULE_DEF>
+							<SHORT_NAME>Demo</SHORT_NAME>
+							<LOWER_MULTIPLICITY>0</LOWER_MULTIPLICITY>
+							<UPPER_MULTIPLICITY>1</UPPER_MULTIPLICITY>
+							<CONTAINERS>
+								<MACC_PARAM_CONF_CONTAINER_DEF>
+								   <SHORT_NAME>DemoGeneral</SHORT_NAME>
+								   <LOWER_MULTIPLICITY>1</LOWER_MULTIPLICITY>
+								   <UPPER_MULTIPLICITY>1</UPPER_MULTIPLICITY>
+								   <SUB_CONTAINERS>
+								      <MACC_PARAM_CONF_CONTAINER_DEF>
+								         <SHORT_NAME>DemoCallbackDTCStatusChanged</SHORT_NAME>
+								         <LOWER_MULTIPLICITY>0</LOWER_MULTIPLICITY>
+								         <UPPER_MULTIPLICITY_INFINITE>true</UPPER_MULTIPLICITY_INFINITE>
+								         <PARAMETERS>
+								            <MACC_FUNCTION_NAME_DEF>
+								               <SHORT_NAME>DemoCallbackDTCStatusChangedFnc</SHORT_NAME>
+								               <LOWER_MULTIPLICITY>0</LOWER_MULTIPLICITY>
+								               <UPPER_MULTIPLICITY>1</UPPER_MULTIPLICITY>
+								            </MACC_FUNCTION_NAME_DEF>
+								         </PARAMETERS>
+								      </MACC_PARAM_CONF_CONTAINER_DEF>
+								   </SUB_CONTAINERS>
+								</MACC_PARAM_CONF_CONTAINER_DEF>
+							</CONTAINERS>
+						</MACC_MODULE_DEF>	        				
+	        		</MEMBERS>
+	        	</PACKAGE>
+			</PACKAGES>
+		</PACKAGE>
+	</PACKAGES>
+</SOMESAR>
